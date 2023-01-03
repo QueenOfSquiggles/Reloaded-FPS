@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://blnwtfug7xpa7"]
+
+[ext_resource type="Script" path="res://Scenes/Player/player_controller.cs" id="1_pul33"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3ruli"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bnu5r"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_375jv"]
+
+[node name="PlayerController" type="CharacterBody3D"]
+floor_stop_on_slope = false
+script = ExtResource("1_pul33")
+gamepad_look_speed = 3.0
+camera_pivot_path = NodePath("CameraPivot")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_3ruli")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_bnu5r")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.535221, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+current = true
+
+[node name="Hands" type="Node3D" parent="."]
+editor_description = "Shows the forwards direction of the player for third person views"
+
+[node name="Hand" type="MeshInstance3D" parent="Hands"]
+transform = Transform3D(0.130309, 0, 0, 0, 0.130309, 0, 0, 0, 0.130309, 0.665209, 0, -0.616894)
+mesh = SubResource("SphereMesh_375jv")
+skeleton = NodePath("../..")
+
+[node name="Hand2" type="MeshInstance3D" parent="Hands"]
+transform = Transform3D(0.130309, 0, 0, 0, 0.130309, 0, 0, 0, 0.130309, -0.619117, 0, -0.616894)
+mesh = SubResource("SphereMesh_375jv")
+skeleton = NodePath("../..")

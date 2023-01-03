@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8otkfc6tauu7"]
+
+[ext_resource type="Script" path="res://Modules/CameraStackSystem/VirtualCamera.cs" id="1_brogc"]
+
+[node name="VirtualCamera" type="Marker3D"]
+script = ExtResource("1_brogc")

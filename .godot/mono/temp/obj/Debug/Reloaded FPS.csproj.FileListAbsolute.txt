@@ -1,0 +1,17 @@
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/bin/Debug/Reloaded FPS.deps.json
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/bin/Debug/Reloaded FPS.runtimeconfig.json
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/bin/Debug/Reloaded FPS.dll
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/bin/Debug/ref/Reloaded FPS.dll
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/bin/Debug/Reloaded FPS.pdb
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/obj/Debug/Reloaded FPS.csproj.AssemblyReference.cache
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/obj/Debug/Reloaded FPS.GeneratedMSBuildEditorConfig.editorconfig
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/obj/Debug/Reloaded FPS.AssemblyInfoInputs.cache
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/obj/Debug/Reloaded FPS.AssemblyInfo.cs
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/obj/Debug/Reloaded FPS.csproj.CoreCompileInputs.cache
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/obj/Debug/Reloaded FPS.csproj.CopyComplete
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/obj/Debug/Reloaded FPS.dll
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/obj/Debug/ref/Reloaded FPS.dll
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/obj/Debug/Reloaded FPS.pdb
+/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/.godot/mono/temp/obj/Debug/Reloaded FPS.genruntimeconfig.cache

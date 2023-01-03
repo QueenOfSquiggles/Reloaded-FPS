@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Xad2fnO+Jvs4MaFHvPKGC8dn7hzMCULzKaoZWA3CkIyYz5l6lrUueT8QF6M4R8+fLFwQlXRI9cqU2afegnwrGQ==",
+  "success": true,
+  "projectFilePath": "/home/nessa/Documents/programming/godot/projects/repos/Reloaded FPS/Reloaded FPS.csproj",
+  "expectedPackageFiles": [
+    "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godot.sourcegenerators/4.0.0-beta.9/godot.sourcegenerators.4.0.0-beta.9.nupkg.sha512",
+    "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharp/4.0.0-beta.9/godotsharp.4.0.0-beta.9.nupkg.sha512",
+    "/home/nessa/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharpeditor/4.0.0-beta.9/godotsharpeditor.4.0.0-beta.9.nupkg.sha512"
+  ],
+  "logs": []
+}
