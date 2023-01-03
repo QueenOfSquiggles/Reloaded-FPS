@@ -10,6 +10,8 @@ public partial class player_controller : CharacterBody3D
 	[Export] private float acceleration = 10.0f;
 
 	[ExportGroup("Camera Control Settings")]
+
+	[Export] private PackedScene virtual_camera_scene;
 	[Export] private float camera_max_angle_degrees = 70.0f;
 	
 
@@ -25,13 +27,16 @@ public partial class player_controller : CharacterBody3D
 	[Export] private NodePath camera_pivot_path;
 	private Node3D camera_pivot;
 
+	[Export] private NodePath third_person_cam_root_path;
+	private Node3D third_person_cam_root;
+
     public override void _Ready()
     {
 		camera_pivot = GetNodeOrNull<Node3D>(camera_pivot_path);
 		// Helper class to allow for GDScript style assertions in C#
 		GDAssertion.Assert(this, camera_pivot != null, $"Failed to load camera pivot node from node path {camera_pivot_path}");
 
-		//third_person_cam_root = GetNodeOrNull<Node3D>(third_person_cam_root_path);
+		third_person_cam_root = GetNodeOrNull<Node3D>(third_person_cam_root_path);
     }
 
     public override void _PhysicsProcess(double delta)
@@ -66,7 +71,19 @@ public partial class player_controller : CharacterBody3D
 		{
 			Input.MouseMode = Input.MouseMode == Input.MouseModeEnum.Captured? Input.MouseModeEnum.Visible : Input.MouseModeEnum.Captured;
 		}
-		
+		if (e.IsActionPressed("toggle_third_person"))
+		{
+			if (third_person_cam_root.GetChildCount() > 0)
+			{
+				foreach(Node n in third_person_cam_root.GetChildren())
+				{
+					n.QueueFree();
+				}
+			} else {
+				var vcam = virtual_camera_scene.Instantiate<VirtualCamera>();
+				third_person_cam_root.AddChild(vcam);
+			}
+		}
     }
 
 	private void _DoLookMotion(Vector2 delta)

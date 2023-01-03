@@ -1,18 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://blnwtfug7xpa7"]
+[gd_scene load_steps=7 format=3 uid="uid://blnwtfug7xpa7"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player_controller.cs" id="1_pul33"]
+[ext_resource type="PackedScene" uid="uid://b8otkfc6tauu7" path="res://Modules/CameraStackSystem/VirtualCamera.tscn" id="2_o025b"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3ruli"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bnu5r"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vw5eg"]
+radius = 0.25
 
 [sub_resource type="SphereMesh" id="SphereMesh_375jv"]
 
 [node name="PlayerController" type="CharacterBody3D"]
 floor_stop_on_slope = false
 script = ExtResource("1_pul33")
+virtual_camera_scene = ExtResource("2_o025b")
 gamepad_look_speed = 3.0
 camera_pivot_path = NodePath("CameraPivot")
+third_person_cam_root_path = NodePath("CameraPivot/SpringArm3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_3ruli")
@@ -23,8 +29,13 @@ shape = SubResource("CapsuleShape3D_bnu5r")
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.535221, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
-current = true
+[node name="VirtualCamera" parent="CameraPivot" instance=ExtResource("2_o025b")]
+gizmo_extents = 1.0
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.733447, 0, 0)
+shape = SubResource("SphereShape3D_vw5eg")
+spring_length = 2.0
 
 [node name="Hands" type="Node3D" parent="."]
 editor_description = "Shows the forwards direction of the player for third person views"
